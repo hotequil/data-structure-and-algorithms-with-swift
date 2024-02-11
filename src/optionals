@@ -1,0 +1,33 @@
+var driverLicense: String? = nil
+
+print("Driver license: \(driverLicense ?? "no license yet")")
+
+driverLicense = "ABCD1234"
+
+print("Driver license: \(driverLicense!)")
+
+if let newDriverLicense = driverLicense{
+  print("The driver license is \(newDriverLicense)")
+} else{
+  print("There is no driver license")
+}
+
+func checkDriverLicense(driverLicense: String?){
+  guard let newDriverLicense = driverLicense else{
+    print("There is no driver license yet")
+    return
+  }
+
+  print("The driver license is \(newDriverLicense)")
+}
+
+checkDriverLicense(driverLicense: nil)
+checkDriverLicense(driverLicense: driverLicense)
+
+var alias: String!
+
+print("My alias is \(String(describing: alias))")
+
+alias = "Hotequil"
+
+print("My new alias is \(alias.uppercased())")
