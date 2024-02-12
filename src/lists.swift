@@ -10,7 +10,10 @@ print("The first list has \(firstLanguagesList.count) languages")
 
 secondLanguagesList.append("C#")
 secondLanguagesList.append("TypeScript")
+secondLanguagesList.removeFirst(2)
+secondLanguagesList.removeLast()
 
+print("Index of C# is \(String(describing: secondLanguagesList.firstIndex(of: "C#")!))")
 print("The second list has \(secondLanguagesList.count) languages")
 
 var mergedLanguagesList = firstLanguagesList + secondLanguagesList
