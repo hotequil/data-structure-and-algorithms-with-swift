@@ -1,10 +1,16 @@
-func sayHello(){
-  print("Hello")
+func sayHelloWorld(){
+  print("Hello world")
 }
 
-sayHello()
-sayHello()
-sayHello()
+sayHelloWorld()
+
+func sayHello(to person: String){
+  print("Hello \(person)")
+}
+
+sayHello(to: "Cout")  
+sayHello(to: "Fabian")
+sayHello(to: "Michael")
 
 func sum(firstNumber: Double, secondNumber: Double) -> Double{
   return firstNumber + secondNumber
@@ -61,3 +67,17 @@ let secondResult = applyOperation(
 
 print(firstResult)
 print(secondResult)
+
+let names = ["Cout", "Fabian", "Michael"]
+let uppercasedNames = names.map({ $0.uppercased() })
+
+print("uppercasedNames: \(uppercasedNames)")
+
+let filteredNames = names.filter({ $0.count <= 4 })
+
+print("filteredNames: \(filteredNames)")
+
+let extract = [200, -50, -5, 2, -100, 20, 1, 10]
+let balance = extract.reduce(0, { $0 + $1 })
+
+print("Your balance is \(balance)")
