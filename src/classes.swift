@@ -1,5 +1,5 @@
 class Person{
-  var name: String
+  private var name: String
   var isMarried: Bool
   var age: Int = 0
 
@@ -26,7 +26,7 @@ class Person{
   func repeatSentence(sentence: String) -> Void{
     print(sentence)
   }
-  
+
   func introduce() -> String{
     return "My name is \(name)"
   }
